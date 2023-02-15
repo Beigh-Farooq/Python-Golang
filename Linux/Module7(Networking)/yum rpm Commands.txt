@@ -1,0 +1,20 @@
+->SYSTEM UPDATES AND REPOS:
+-------------------------------------------------------------------
+1. yum (CentOS), apt-get(other Linux- ubuntu)
+------------------------------------------------------------
+	-yum command is used to download, install and verify 
+	 pacakages from internet.
+	-yum needs internet connection.
+	-First Become root
+	Example:# yum install ntp
+		it will first check first if its already installed
+		then itb will show package already installed.
+	 	Otherwise it will download, install and verify package
+
+
+2. rpm (Red hat Package Manager)
+------------------------------------------------------------
+	-rpm command is used to install packages locally. 
+	-Packages that are already downloaded in local repo
+	-rpm command installs them.
+	-rpm package doesn't need any internet.

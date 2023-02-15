@@ -1,0 +1,7 @@
+.Multiple files can be combined into one
+.One file can be split into multiple files
+	.cat file1 file 2 file 3 > file4
+	.split file4
+	e.g. split -l 300 file.txt childfile
+	split file.txt into 300 lines per file and output to childrenfilraa,
+	childrenfileab and childrenfileac.

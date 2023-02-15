@@ -1,0 +1,28 @@
+->TALKING TO USERS(users,wall,write) 	#ironman password ironman123
+-------------------------------------------------------------------------------------------------------------------
+	1.users:
+	-----------------------------------------------------------------------------------------------------------
+	This command shows the users 
+	example: users
+		fbeigh ironman
+
+	2.wall:
+	-----------------------------------------------------------------------------------------------------------
+	->This command displays the broadcast message to every user 
+	Example: wall 
+		 
+		 Please logoff, This system is comming down for maintenance.
+		 fbeigh
+		 To come out press ctrl+d or ctrl+c
+	-- login with one username by using putty and another user in terminal 
+	   And run above command in terminal this will be broadcasted to user who is logged in putty terminal
+	 
+	3. write:
+	----------------------------------------------------------------------------------------------------------
+	-> This command displays the broadcast message to specified user
+	Syntax:  write username
+		message
+	Example: write ironman
+		 Hi ironman, your web is getting bigger, Please stop spreading your we.
+		 Beigh
+		 Press(ctrl+d or ctrl+c)

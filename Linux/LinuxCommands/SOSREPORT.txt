@@ -1,0 +1,25 @@
+->SOS REPORT
+-------------------------------------------------------------------------
+	.What is SOS report?
+	-----------------------------------------------------------------
+	.Collect and package diagnostic and support data
+	
+	.PACKAGE NAME
+	---------------------
+	.sos-version
+	
+	->COMMAND
+	----------------------
+	.sosreport
+	First be root 
+	After running above command
+	Press ENTER to continue
+	Next enter first initial and last name (fbeigh)
+	Next Enter the case id that you are generating this report for[]: ?
+	It will collect all files into one file that file will be saved 
+	in temp directory.
+	You sos report is saved in /var/tmp/sosreport-iafzal.9000-20.....tar.xz
+	Now you can see this file by entering into 
+	cd/var/tmp
+	ls -ltr
+	Now copy this file or ftp this file to redhat

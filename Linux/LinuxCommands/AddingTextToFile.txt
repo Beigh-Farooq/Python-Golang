@@ -1,0 +1,46 @@
+-->ADDING TEXT TO FILES
+	3 simple ways to add text to a file
+	.vi
+	.Redirect command output > or >>
+	.echo > or >>
+	
+	-->echo:
+	SYNTAX: # echo "text u want to add" > filename
+	EXAMPLE:# echo "Hello world" > jerry
+	--Appending Text
+	Example:# echo "how are you" >> jerry
+	o/p:# Hello world
+	      how are you
+	
+	--Redirect command output
+	Syntax: ls -l >> filename
+	Example:# touch listingofdir
+		# ls -l >> listingofdir
+		# cat listingofdir
+
+--INPUT AND OUTPUT REDIRECTS
+	THERE ARE 3 REDIRECTS IN LINUX
+	1. standard input(stdin) and it has file descriptor number as 0
+	2. standard output (stdout) and it has file descriptor number as 1
+	3. standard error(stderr) and it has file descriptor number as 2
+
+	OUTPUT(stdout)- 1
+	-----------------------------------
+	.By default when running commands its output goes to the terminal
+	.The output of a command can be routed to a file using > symbol
+		Example:#ls -l > listingofdir
+			#pwd > findpath
+	.If using the same file for additional output or to append to the same file then use >> 
+		.Eg: # ls -la >> listingofdir  (la outputs hidden files)
+		     # echo "Hello world" >> findpath
+
+-->STANDARD OUTPUT TO A FILE(tee command)
+-------------------------------------------------------------------------
+."tee" command is used to store and view(bot at the same time) the output of any command
+.The command is named after T-splitter used in plumbing.It basically breaks the output
+of a program so that it can be both displayed and saved in a file.It does both the tasks simultaneously,
+copies the result into the specified files or variables and also display the result.
+Example:# echo "Hello world" | tee eleni-david
+	# echo "eleni is gf of david" | tee -a eleni-david (-a will append the text)
+	# wc -c eleni-daid (This command will output no of characters in file)
+	# ls -l | tee listofdir

@@ -1,0 +1,17 @@
+-> PROCESS STATUS COMMAND(ps):
+-----------------------------------------------------------------------------------------------
+	-> ps
+	---------------------------------------------------------------------------------------
+	. ps command stands for process status and it displays all the currently running
+	  processes in the Linux System.
+	Syntax: ps	(Shows the processes of the current shell)
+	It shows below columns
+	PID	=	the unique process ID
+	TTY	=	terminal type that the user logged into.
+	TIME	=	amount of CPU in minutes and seconds that the process has been running
+	CMD	=	name of the command
+	---------------------------------------------------------------------------------------
+	-> ps -e		(shows all running processes)
+	-> ps aux		(Shows all running processes in BSD(berckly System Description) format)
+	-> ps -ef		(Shows all running processes in full format listing(Most commonly cmd))
+	-> ps -u username	(Shows all processes by username).

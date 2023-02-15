@@ -1,0 +1,40 @@
+->SYSTEM UTILITY COMMANDS(date,uptime,hostname,uname,which,cal,bc):
+-------------------------------------------------------------------------------------------------
+	1. date 
+	-----------------------------------------------------------------
+	syntax: date
+	This command will show the date
+	
+	2.uptime
+	------------------------------------------------------------------
+	syntax: uptime
+
+	3. hostname
+	-------------------------------------------------------------------
+	syntax: hostname
+	This command will show hostname
+
+	4. uname
+	--------------------------------------------------------------------
+	syntax: uname
+	This will show os name
+
+	5. which
+	---------------------------------------------------------------------
+	syntax: which commandname
+	example: which pwd
+	o/p	: /usr/bin/pwd
+	This will show in which file command pwd is stored
+
+	6. cal 
+	----------------------------------------------------------------------
+	syntax: cal 
+	This will show calendar of the current month
+	-> cal 2022 #This will show the calendar of the year 2022
+
+	7. bc
+	-----------------------------------------------------------------------
+	syntax: bc
+	This will show the binary calculator and can perform operations
+	to get out from this type quit
+

@@ -1,0 +1,84 @@
+-->CREATING FILES
+
+1. Creating Files in Linux using touch
+	cmd touch filename
+	eg touch jerry
+	We can create multiple files using one touch command
+	cmd touch filename filename filename filename ...
+	eg touch bart lisa marge
+2.Using cp (Copy Command)
+	cmd cp fileName(Whichuwantocopy) destinationFileName
+	eg cp jerry lex
+	eg cp jerry clark
+	eg cp jerry lois
+3.Using vi command
+	cmd vi filename
+	eg  vi homer
+	After Running this command file is opened
+	to exit from opened file run following command
+	cmd :wq!
+--CREATING DIRECTORIES
+Using mkdir
+	cmd mkdir directoryName
+	eg mkdir sienfeld
+
+	#We can create Multiple directories using single command
+	cmd mkdir directoryName directoryName directoryName
+	eg  mkdir superman simpsons
+
+
+-->LINUX FUNDAMENTALS
+
+Command Syntax: command option arguments
+		eg ls   -ltr  
+		eg of removing directories
+		   rm	-r	Newfolder(DirectoryName)
+
+	-->File Permissions
+	There are 3 types of permissions
+	. r - read
+	. w - write
+	. x - execute a file
+	Each permission(rwx) can be controlled at three levels:
+	. u - user(yourself)
+	. g -group(can be people in the same project)
+	. o - other(Everyone on the system)
+	
+	Example: execute this command on linux terminal
+		# ls -l jerry(filename)
+		Above command which give this output
+		-rw-rw-r--.
+		here first - means it is a file
+		. rw- means user has permission to read and write file but not to execute.
+		. rw- means group has permission to read and write file but not to execute.
+		. r-- means others have only read permission.
+	REMOVING PERMISSION TO A FILE USING(chmod command or change mod)
+	.Example # chmod g-w jerry
+		.Here g-w means remove write permission to group in file jerry
+		.Now we will get: -rw-r--r--
+
+	IF WE WANT TO REMOVE read PERMISSION TO ALL.
+	.EXAMPLE # chmod a-r jerry
+	      o/p# --w-------
+	IF WE WANT TO REMOVE WRITE PERMISSION IN SPECIFIC LEVEL:
+	EXAMPLE: # chmod u-w jerry
+	      o/p# ----------
+		Now if we want to remove jerry file (rm jerry) we cann't remove.
+		If we want to write in jerry file by(cat jerry) it will show permission denied.
+
+	GIVING PERMISSIONS BACK TO A FILE:
+	EXAMPLE: # chmod u+rw jerry
+		 # chmod g+rw jerry
+		 # chmod o+r  jerry 
+
+	DIRECTORIES:
+	.In directories x(executuable) means that we can enter(cd) in that file.
+  	Now Remove x to all in seinfeld directory:
+	EXAMPLE:# chmod a-x seinfeld
+	     o/p# drw-rw-r--
+		.Now if we cd into seinfeld it will show permission denied.
+	GIVING PERMISSION BACK TO A DIRECTORY:
+	EXAMPLE:# chmod a+x seinfeld
+	o/p     # drwxrwxr-x.
+	Now we can enter into seinfeld directory.
+	 

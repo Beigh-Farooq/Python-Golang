@@ -1,0 +1,16 @@
+->FINDING SYSTEM INFORMATION
+-----------------------------------------------------------------------------
+	.cat /etc/redhat-release
+	------------------------------------------------------------
+	- This will give the information about operating system.
+
+	.uname -a
+	-------------------------------------------------------------
+	- This will also give you information about operating system
+	kernal.
+	
+
+	.dmidecode (change to root)
+	-------------------------------------------------------------
+	- This will also give you information about operating system, 
+	processor, memory, hardware etc

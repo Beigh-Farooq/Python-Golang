@@ -1,0 +1,11 @@
+->CHANGING SYSTEM HOSTNAME
+------------------------------------------------------------------------------
+	.hostnamectl set-hostname newhostname
+	---------------------------------------------------------------------
+	Example:# hostnamectl set-hostname jkhost
+	.After Running this command 
+	.Reboot Linux system(reboot or init 6)
+	.Then new hostname will be reflected on prompt 
+
+	
+	Note: hostname is stored in /etc/hostname file in linux

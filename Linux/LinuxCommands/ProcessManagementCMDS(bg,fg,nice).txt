@@ -1,0 +1,34 @@
+-> PROCESS MANAGEMENT
+--------------------------------------------------------------------------------------
+-> bg 
+--------------------------------------------------------------------------------------
+.If any process is running that process will be attached to terminal,
+ Inorder to run this proceess in background we will run "bg" command,
+ After running "bg" cmd this process will run in background and we will
+ get prompt back.
+Example: sleep 100 	(this process will run till 100s if u want to
+			put this task in background run ctrl+z we will
+			get prompt back and this process(sleep) is stopped
+			ANd we will get prompt back, Now run "bg" cmd This 
+			process will run now in background)
+
+	# ctrl+z	(with this process is stopped and we will get prompt back
+	# jobs		(This will show is process in running status or stopped status
+-> fg
+---------------------------------------------------------------------------------------
+.After putting process in background by running bg cmd , Now we can also put this process
+ in foreground by running "fg" command, Now process will be attached to terminal.
+Example: sleep 100s	(sleep is a process)
+	 ctrl+z		(stopped)
+	 jobs		(stopped)
+	 bg		(running in background)
+	 jobs		(running)
+	 fg		(running attached to terminal)
+
+-> Process Priority(nice)
+----------------------------------------------------------------------------------------
+.The niceness scale goes from -20 to 19.
+.The lower the number more priority that task gets.
+Syntax: nice -n 5 process 
+Example: nice -n 5 sleep 10	(CPU will give process(sleep 10) 5th priority)
+	 nice -n -20 sleep 10	(CPU will give top priority)

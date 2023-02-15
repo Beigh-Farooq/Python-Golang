@@ -1,0 +1,9 @@
+->HOW TO OPEN IMAGE IN LINUX:
+-------------------------------------------------------------------
+1. Become Root and Install ImageMagick package
+	[ yum install ImageMagick ]
+2. Enter into that folder where image is located.
+	[ cd /home/fbeigh/Pictures ]
+3. Run below command.
+	[ display ImageName ]
+	Example:[ display index.jpg ]

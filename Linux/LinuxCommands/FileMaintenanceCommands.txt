@@ -1,0 +1,47 @@
+
+-->FILE MAINTENANCE COMMANDS(cp, rm, mv, mkdir, rmdir):
+---------------------------------------------------------------------------
+
+	1. cp:(copy command)
+	-------------------------------------------------------------------
+	Syntax: cp sourcefilename destinationfilename
+	Example:# cp george david
+
+	2. rm (remove command):
+	------------------------------------------------------------------
+	Syntax: rm filename
+	Example:# rm apoho
+
+	3. mv (move file):
+	-------------------------------------------------------------------
+	Syntax: # mv sourcefilename destinationfilename
+	Example:# mv david puddy
+
+	4. mkdir (make directory):
+	-------------------------------------------------------------------
+	Syntax: # mkdir directoryname
+	Example:# mkdir gameofthrones
+
+	5. rmdir (remove directory)
+	-------------------------------------------------------------------
+	Syntax: # rmdir directory
+	Example # rmdir gameofthrones
+		or
+	Example # rm -r gameofthrones
+
+	6. chgrp (change Group command)
+	--------------------------------------------------------------------
+	.First we have to enter into root by running below command:
+		# su -
+		enter password
+	.Now enter into home directory by running below command:
+		#cd /home/fbeigh
+	.Now we can change group of any file by below command:
+		# chgrp root puddy(filename)
+
+	7. chown (change ownership of file)
+	--------------------------------------------------------------------
+	Syntax: # chown root/fbeigh filename
+	Example:# chown root puddy
+	.We can run both in one command:
+	Example:# chown fbeigh:fbeigh puddy

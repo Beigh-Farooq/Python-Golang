@@ -1,0 +1,48 @@
+--> "sed" command:
+---------------------------------------------------------------------------------------------------------------
+	->Replace a string in a file with a new string
+	-------------------------------------------------------------------------------------------------------
+	> Syntax: sed 's/Kenny/Lenny/g' filename
+		 In Above command s -> means substitue, Kenny -> is string from which you want to replace
+		 with Lenny and g -> represents global
+	.By running the above cmd change will be reflected only in output not in original file.
+	.To make change in file we will make use of -i .
+		Example: sed -i 's/Kenny/Lenny/g' seinfeld-characters
+
+
+	->Find and delete a line:
+	-----------------------------------------------------------------------------------------------------
+	Example: sed -i '/Seinfeld/d' Seinfeld-characters
+	This cmd will delete seinfeld from seinfeld-character file.
+
+
+	->Remove empty lines
+	------------------------------------------------------------------------------------------------------
+	Example: sed -i '/^$/d' seinfeld-characters
+		. ^ means starting and $ means Ending with nothing and d means delete.
+	
+
+	->Remove the first or n lines in a file
+	-------------------------------------------------------------------------------------------------------
+	.If we want to delete first line or first two lines.
+		Example: sed -i '1d' seinfeld-characters
+			 sed -i 'i,2d' seinfeld-characters
+
+
+	->To replace tabs with spaces
+	----------------------------------------------------------------------------------------------------------
+	Example: sed -i 's/\t/ /g' seinfeld-characters
+
+	->Show defined lines from a file
+	----------------------------------------------------------------------------------------------------------
+	Example: sed 12,18d seinfeld-characters
+		 sed -n 12,18p seinfeld-characters
+
+
+	->Substitute within vi editor
+	-----------------------------------------------------------------------------------------------------------
+	Example: sed 's/Seinfeld/s/' seinfeld-characters
+	Above command replaces all Seinfeld characters with s in seinfeld-characters file.
+	
+	Example: sed '8!s/Seinfeld/S/' seinfeld-characters
+	Above command replaces all Seinfeld characters with s except seinfeld which is at 8th line.

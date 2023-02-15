@@ -1,0 +1,18 @@
+->SYSTEM MONITORING
+--------------------------------------------------------------------------------------------------------------------
+.top			->Display Linux processes
+.df			->Report file system disk space usage
+.dmesg			->is used to examine or control the kernal ring buffer.
+.iostat 1		->is used for monitoring system input/output device loading
+			  by observing the time the devices are active in relation to their average transfer rates.
+.netstat		->It shows info about network connections.
+.free			->displays the total amount of free and used physical and swap memory in the system, as well
+			  as the buffers and caches used by the kernal.The information is gathereed by parsing
+			  /proc/meminfo. THe displayed columns are:
+			  total - total installed memory
+			  used  - Used memory
+			  free  - Unused Memory
+			  shared - Memory used by tmpfs 
+			  buffers - Memory used by kernal buffers
+.cat /proc/cpuinfo
+.cat /proc/meminfo

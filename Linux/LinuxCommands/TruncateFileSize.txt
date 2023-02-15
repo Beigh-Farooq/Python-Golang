@@ -1,0 +1,8 @@
+-->TRUNCATE FILE SIZE(truncate)
+--------------------------------------------------------------------
+.The Linux truncate command is often used to shrink or extend the size
+ of a file to the specified size
+.Command
+------------------
+ .truncate -s 10 filename
+  while truncating the file some data is lost

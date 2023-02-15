@@ -1,0 +1,28 @@
+->systemctl command
+---------------------------------------------------------------------------------------------------------------
+	.systemctl command is a new tool to control system services
+	.It is available in version 7 and later and it replaces the service command
+	.USAGE EXAMLPE:
+	-------------------------------------------------------------------------------------------------------
+	cmd: systemctl start|stop|status servicename.service     (firewalld is pre installed service in linux)
+	Example: systemctl start firewalld.service
+	Example: systemctl status firewalld.service
+	Example: systemctl stop firewalld.service
+
+	systemctl enable servicename.service
+	systemctl restart|relod servivename.service
+	systemctl list-units --all
+	
+	.Run this command under root
+	
+	-----------------------------------------------------------------------------------------------------
+	.To add a service under systemctl management:
+		Create a unit file in etc/systemd/system/servicename.service
+
+	.To control system with systemctl
+		systemctl poweroff
+		systemctl halt
+		systemctl reboot
+
+
+	

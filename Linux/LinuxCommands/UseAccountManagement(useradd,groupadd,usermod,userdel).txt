@@ -1,0 +1,72 @@
+->>USER ACCOUNT MANAGEMENT (useradd,groupadd,usermod,userdel):
+-----------------------------------------------------------------------------
+	Commands:
+	1.useradd:
+	--------------------------------------------------------------------
+	Before Adding using enter into root by running this command ( su - )
+	-Command to add User:
+	SYntax: useradd username
+	Example: useradd spiderman
+
+	-How to check user is added or Not:
+	By Running This commmand: 
+	Syntax: id username
+	Example: id spiderman
+		OR
+	Enter into home dir by cd /home/
+	Then run ls -l you will get added user
+
+	2. groupadd:
+	---------------------------------------------------------------------
+	Syntax: groupadd groupname
+	Example: groupadd superheros
+	-To check group run this command: cat /etc/group
+	
+	3. userdel:
+	---------------------------------------------------------------------
+	Syntax: userdel -r username
+	Example: userdel -r spiderman
+
+	4. groupdel:
+	-----------------------------------------------------------------------
+	SYntax: groupdel groupname
+	Example:groupdel nonewgroup
+	
+
+	5. usermod:
+	-----------------------------------------------------------------------
+	.This command is used to modify the user:
+	Syntax: usermod -G groupname username
+	Example: usermod -G superheores spiderman
+	To check: cat /etc/group or grep spiderman/etc/group
+	.spiderman is now in group in superheros
+	..........(chgrp -R superheros spiderman)
+
+
+Files:
+----------------
+	1. /etc/passwd: 
+	-----------------------------------------------------------------------------
+	.When we are creating a new user it appends user information at the bottom
+	 You can view info by running the following command
+	(cat /etc/passwd)
+
+	2. /etc/group:
+	-----------------------------------------------------------------------------
+	. WHen we are creating a new group it appends group information at the bottom 
+	 View by running this command
+	(cat /etc/shadow)
+
+	3. /etc/shadow:
+	------------------------------------------------------------------------------
+	.this file is strictly for passwords for users that we create:
+	(cat /etc/shadow)
+
+->Command That is mainly used in Corporate to create user:
+----------------------------------------------------------------------------------------------
+Example: useradd -g superheros -s /bin/bash -c "Ironman Character" -m -d /home/ironman ironman
+To check: id ironman
+->To create password to a user use below command
+-------------------------------------------------
+Syntax: passwd username
+Example: passwd ironman

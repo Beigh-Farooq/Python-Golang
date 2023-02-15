@@ -1,0 +1,42 @@
+-> LOG MONITORING
+--------------------------------------------------------------------------------
+.Another and most important way of system administration is log monitor
+	->Log Directory=/var/log
+	-----------------------------------------
+	Example: cd /var/log
+		 ls -l | more or ll | more
+	.boot
+	-----------------------------------------
+	First become root by running this command su -
+	# more boot.log
+	
+
+	.chronyd = NTP
+	------------------------------------------
+	#more chronyd
+	
+	.cron
+	-------------------------------------------
+	#more chron
+	
+	.maillog
+	--------------------------------------------
+	#Has all the information about mail that you 
+	send and mail that you recieved. 
+	#more maillog
+	
+	.secure
+	--------------------------------------------
+	#Has information of all the users that have 
+	logged in and logged outt or failed to log in 
+	or log out
+	#more secure
+	
+	.messages
+	--------------------------------------------
+	# has all the hardware, software, application 
+	hostname etc all the information.
+	#more messages
+	
+	.httpd
+	--------------------------------------------
