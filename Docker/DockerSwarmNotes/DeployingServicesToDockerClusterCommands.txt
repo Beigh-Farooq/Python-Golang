@@ -1,0 +1,35 @@
+-> Creating a service on Swarm:
+-----------------------------------------------------------------------------
+	command:# docker service create --name myservice --replicas 3 
+		 --publish 80:80 httpd  
+	- Above command will create service httpd(appache server) inside cluster.
+	- This means it will create 3 services on 3 nodes one service on
+	  each node.
+	- Here replicas means it will create create 3 instances of httpd service
+	  inside cluster nodes which means that it makes your service up always.
+	command# docker service create --name demo --replicas 6 --publish 80:80
+		 httpd
+	    - We have one master node and two worker nodes
+		Two services on master node, two on worker node1 and 2 on worker
+		node2
+
+	-> Command to view service:
+	---------------------------------------
+	cmd# docker service ls
+	-> To see where is your service running:
+	----------------------------------------
+	cmd:# docker ps myservice
+		or
+	 - go to any worker nodes putty session and run below command
+	 cmd:# docker ps  -(you get a container that is running on this worker node)
+
+
+	-> If any worker node removes service what will happen:
+	-------------------------------------------------------
+	 . Command to remove service from a node
+	   cmd#: docker rm -f myservice.1.wpx.....m5
+	 . Now run # docker ps
+	   service is removed 
+	 . Now after a second if we run # docker ps 
+	   you will get service is running again this is the job of docker swarm
+	   If anyone of the node is down other two nodes make it up and running. 

@@ -1,0 +1,43 @@
+->CREATING A NEW DOCKER IMAGE:
+-------------------------------------------------------------------
+Procedure for docker on windows
+-------------------------------------------------------------------
+1. open cmd prompt in administration mode
+
+2. make directory my-simple-webapp by cmd# mkdir.
+
+3. Enter into my-simple-webapp folder by cd
+
+4.Create file name as "dockerfile" inside my-simple-webapp folder
+	Example:.........my-simple-webapp> type nul > Dockerfile
+	-Write steps used to run your application on ubuntu host
+	 in this dockerfile.
+
+5. Create app.py file inside my-simple-webapp folder 
+	Example:.......my-simple-webapp> type nul > app.py
+	.write or copy code of your code inside this app.py file.
+	Example: ..> start notepad++ (for windows)
+	Example: ..> for linux cat > app.py
+		     ....code...
+		     ctrl+c
+			
+6. Now build your image
+	...> docker build .
+    This will build the image
+
+7. We can also give name to our image in tag
+	EXAMPLE: ...>docker build . -t my-simple-webapp
+
+8. Now run below command to see you image is there or not
+	Example:..>docker images
+
+9. To see your application is running or not
+	Example:...>docker run my-simple-webapp
+	It will run 
+
+10. How do it push to docker hub to make available to public
+	step 1. docker build . -t beigh123/my-simple-webapp
+	step 2. docker login
+	step 3. docker push beigh123/my-simple-webapp	
+	(it will be now pushed to docker hub)
+

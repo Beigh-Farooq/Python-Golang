@@ -1,0 +1,40 @@
+
+-------------------------------------INTRODUCTION TO DOCKER-----------------------------------------
+
+-> WHAT IS DOCKER?
+----------------------------------------------------------------------------------------------------
+	ANS: Docker is a software platform that allows you to build, test, 
+		and deploy applications quickly.
+
+->  Docker Containers?
+-----------------------------------------------------------------------------------------------------
+	1. Docker Containers contain binaries, libraries, and configuration files
+		along with the application itself.
+	2. They don’t contain a guest OS for each container and rely on the 
+		underlying OS kernel, which makes the containers lightweight.
+	3. Containers share resources with other containers in the same host OS 
+		and provide OS-level process isolation.
+	4. It is a runtime instance of an image.
+	5. Allows developers to package applications with all parts needed such 
+		as libraries and other dependencies.
+-> Docker Image?
+------------------------------------------------------------------------------------------------------
+	.It is a file, comprised of multiple layers, used to execute code in a Docker container.
+	.They are a set of instructions used to create docker containers.
+
+-> Docker file?
+--------------------------------------------------------------------------------------------------------
+	.It is a text document that contains necessary commands which on execution helps assemble 
+		a Docker Image.
+	.Docker image is created using a Docker file.
+	
+
+-> What is a container image?
+-----------------------------------------------------------------------------------------------------
+	ANS- When running a container, it uses an isolated filesystem. 
+	This custom filesystem is provided by a container image. 
+ 	Since the image contains the container's filesystem, 
+ 	it must include everything needed to run the application - all dependencies, 
+ 	configuration, scripts, binaries, etc. The image also contains other configuration 
+ 	for the container, such as environment variables, a default command to run, 
+ 	and other metadata.

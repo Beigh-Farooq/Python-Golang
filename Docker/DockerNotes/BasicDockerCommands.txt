@@ -1,0 +1,70 @@
+->BASIC DOCKER COMMANDS
+----------------------------------------------------------------------------------------------------
+	-cmd docker run centos
+	-------------------------------------------------------------------------------------
+	. docker run command is used to run a container from a image.
+	. we need to specify the name of image.
+	. Docker engine will search this image from docker hub and will pull that image.
+	
+	Note: After running a container (using above cmd) container will be in exit status.
+	
+	-cmd docker run -it centos bash	(command To enter into the container)
+	-------------------------------------------------------------------------------------
+	.Now you can run commands inside logged in container
+	Example: cat /etc/*release*
+	.To get out from the container simply type "exit".
+
+
+	-cmd docker ps
+	-------------------------------------------------------------------------------------
+	. docker ps command will list all the running containers.
+	Note: container remains in running state till it has any process to do otherwise it 
+	      will exit. 
+	      In this case centos container is exited therefore ps command will not show any
+		running containers.
+	      So we will run centos container again in background and will sleep it for some
+	      Time. Then we will run ps command now ps command will show running container.
+	Example: docker run -d centos sleep 20	(This will sleep centos container for 20s in bg)
+	Now      docker ps	(This will show now running container)
+
+
+	-IF YOU WANT TO SEE ALL THE CONTAINERS THAT RUN IN THE PAST
+	-cmd docker ps -a
+	-----------------------------------------------------------------------------------------
+	.Example: docker ps -a 		(This will show all the containers that ran in the past)
+
+	
+	-TO KILL A CONTAINER
+	-cmd docker stop ContainerName or containerId
+	-----------------------------------------------------------------------------------------
+	. docker stop ContainerName/containerid
+
+
+	-TO REMOVE CONTAINERS FROM THE DISK
+	------------------------------------------------------------------------------------------
+		.Command to remove a single container
+		-----------------------------------------------------------
+		Example: docker rm containerName/containerId  (we can use first 3 letters of containerId)
+
+		.Command to remove multiple containers
+		------------------------------------------------------------
+		Example: docker rm containerid containerid containerid
+			docker rm b92 43b 969 5f1
+
+	-TO LIST IMAGES OF CONTAINER PRESENT
+	-----------------------------------------------------------------------
+	-CMD docker images	(This will show the images of containers)
+		
+		-COMMAND TO REMOVE IMAGE OF CONTAINER
+		------------------------------------------------
+		. CMD docker rmi repositoryName/ImageId
+		Example: docker rmi centos
+			 docker rmi hello-world
+		NOTE: It is mandatory to remove container first after 
+		      that you can be able to remove container image.
+		      If you first didn't remove container you will
+		      not be able to remove container image,
+		      you will face an error.
+
+
+	

@@ -1,0 +1,86 @@
+--> DOCKER SWARM:
+------------------------------------------------------------------
+-> Docker Swarm is an orchestration service within Docker that allows
+ us to manage and handle multiple containers at the same time.It is 
+ also a cluster of multiple containers.
+
+--> Docker Swarm Commands:
+---------------------------------------------------------------------------
+	Step 1: Create 3 instances in aws
+	-------------------------------------------------------------------
+	-> Master Node
+	-> Worker Node-1
+	-> Worker Node-2
+	
+	Step 2: Setup docker cluster
+	-------------------------------------------------------------------
+	1  .open putty and connect Master Node using Master Nodes
+	    public ip address.
+	   .login as: ubuntu
+	   .sudo apt update
+	   .sudo su	(root acesses)
+	   .sudo apt install -y docker.io (install docker on master node)
+	
+		
+	
+	2. .open another putty session and connect Worker Node-1
+	    using public ip address of worker Node-1
+	   .login as: ubuntu
+	   .sudo apt update
+	   .sudo apt install -y docker.io (install docker on worker Node-1)
+
+	3  .open another putty session and connect Worker Node-2
+	    using public ip address of worker Node-2
+	   .login as: ubuntu
+	   .sudo apt update
+	   .sudo apt install -y docker.io (install docker on worker Node-2)
+	   
+	Step 3: Now initialize docker swarm to Master Node
+	---------------------------------------------------------------------
+	1. Go to putty session of Master Node and initialize docker swarm
+	   by using below command.
+		cmd#  sudo docker swarm init --advertise-addr 3.19.222.14(Ip of Master Node)
+	   -> After running above command we will get token copy token
+
+	commands after culster step up:
+		-----------------------------------------------------------
+		->Command To check nodes
+			#docker node ls
+		-> command to check docker swarm status and number of nodes etc
+			# docker info
+		-> If you want to remove Node from swarm
+			# docker node rm NodeID
+		-> If you want to remove Manager Node
+			# docker swarm leave --force
+		-> If you lost token how to get token
+			#docker swarm join-token worker
+			#docker swarm join-token manager
+
+
+	2. Go to putty session of Worker Node-1 and paste here token and 
+	    by running the copied token we will get below msg
+	    "This node joined swarm as worker node"
+		Example: # sudo docker join --token SWMTKN-1-3714h6so9xipo067g95z01frh1k97
+			gq5hrvh4qs43xzuirvma2-6c20ba3o9e02u2fc4jpaxp2ti 3.19.222.44.2377
+		output: This node joined swarm as worker node
+
+		-> command to check docker swarm status and number of nodes etc
+			# docker info
+		-> Command to leave the swarm
+			# docker swarm leave
+			Output: Node has left the swarm
+		
+
+	3. Go to putty session of Worker Node-2 and paste here token and 
+	    by running the copied token we will get below msg
+	    "This node joined swarm as worker node"
+		Example: # sudo docker join --token SWMTKN-1-3714h6so9xipo067g95z01frh1k97
+			gq5hrvh4qs43xzuirvma2-6c20ba3o9e02u2fc4jpaxp2ti 3.19.222.44.2377
+		output: This node joined swarm as worker node 
+	
+		-> command to check docker swarm status and number of nodes etc
+			# docker info
+	
+		NOTE: we can manage all the worker through manager node
+	 	 to see all commands go to step 3 option 1
+	

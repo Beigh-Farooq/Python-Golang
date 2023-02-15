@@ -1,0 +1,41 @@
+->CREATING PYTHON IMAGE AND RUNNING THAT IMAGE 
+	AND PUSHING THAT INTO DOCKER HUB
+-------------------------------------------------------------------------------
+-> First create a folder on desktop named hey-python
+-> create python file(index.py) inside hey-python folder.
+-> Inside index.py file write code.
+	[print hello world using flask]
+-> create requirements.txt file inside hey-python folder.
+	.Inside this file write requirements you need for 
+	this image in this case we only need flask.
+	. so we write flask inside requirements.txt file
+-> create a file named as "Dockerfile" inside hey-python folder.
+	--Inside dockerfile
+	.First write FROM python:3-alpine3.15	#(ImageName)
+	.WORKDIR /app	#here app is working directory
+	.COPY . /app  	#here we are copying code from current dir
+			# to app dir 
+	.RUN pip install -r requirements.txt
+		[It will install all the requirements that are 
+			mentioned in requirements.txt file]
+
+	.EXPOSE 3000	#it will run on host machine at port no 3000
+	.CMD python ./index.py  #This cmd will run index.py file
+
+-------------------------------------------------------------------------------
+->Now open terminal in vscode or go to cmd prompt
+	Enter into[Desktop\Docker\hey-python>]
+1. Now run following command
+	...> docker build -t beigh123/hey-python-flask:0.0.1.RELEASE . 
+	.This will build the image named "hey-python-flask:0.0.1.RELEASE
+	.Now go inside images and check is it there or not.
+	[-t stands for tag]
+
+2. Now We can run this image as a container by using below command.
+	...> docker run -d -p 3000:3000 beigh123/hey-python-flask:0.0.1.RELEASE
+	.This will run a container on port 3000 on local machine.
+	[Here first 3000 is port no of local machine 
+		and second 3000 is port number of image container.]
+	. -d stands for detached mode
+3. Now we can push this image to docker hub.
+	..>docker push beigh123/hey-python-flask:0.0.1.RELEASE

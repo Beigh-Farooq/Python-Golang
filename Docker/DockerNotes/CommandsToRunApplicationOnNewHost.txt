@@ -1,0 +1,17 @@
+->STEPS FOR RUNNING YOUR APPLICATION ON A NEW HOST:
+----------------------------------------------------------------
+First run a container and enter into container terminal
+--> docker run -it ubuntu bash
+-Now inside ubuntu container follow below steps
+1. apt-get update
+2. apt-get install -y python3
+3. apt-get install python3-pip
+4. pip install flask
+5. Create/Copy application code to /opt/app.py
+	It can be done in two ways
+	1. cat > /opt/app.py
+	   code.....
+	   CTRL+c
+	2. apt-get install vim
+	   vi /opt/app.py
+6. FLASK_APP=/opt/app.py flask run --host=0.0.0.0

@@ -1,0 +1,46 @@
+-> Run-tag
+----------------------------------------------------------------------------
+	- cmd docker run redis
+		.The above command will run a redis container with latest version
+		.By default it will run latest version
+	What if we want another version to run, incase of that we use tag
+	Example: docker run redis:4.0
+	Now docker will run the specified version of redis that you give in tag.
+->Run-stdin
+------------------------------------------------------------------------------------
+?
+
+
+->Run- PORT mapping
+-------------------------------------------------------------------------------------
+????
+
+->RUN - Volume mapping
+--------------------------------------------------------------------------------------
+.Whenever we are creating a container a any change to data remains inside a isolated file
+ inside a container.
+.When container is deleted all the data is lost.
+.Inorder to persist or store data of container you want to map a directory outside a docker
+ container on docker host by using below command.
+
+-cmd docker run -v directoryNameOutsideDockerContainer:DirectoryNameInsideDockerCOntainer ContainerName
+Example: docker run -v /opt/datadir:/var/lib/mysql mysql
+
+.Now all the data will now be stored in external directory named as opt/datadir.
+.This directory will remain even if container is removed.
+
+
+->Inspect Container
+--------------------------------------------------------------------------------------------------
+.inspect command will show all the detailed details of a container
+ like id,name,path,state,mounts etc.
+-Cmd: docker inspect containerName
+Example: docker inspect blissful_hopper
+
+
+->Container Logs
+-----------------------------------------------------------------------------------------------------
+-cmd: docker logs ContainerName
+Example: docker logs blissful_hopper
+
+	 
